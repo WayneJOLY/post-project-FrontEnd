@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <title>Post Project</title>
+</head>
+<body>
+    <section>
+        <button class="btnAdd">Agregar</button>
+    </section>
+    <main class="main-content">
+        <aside class="form-container" id="form-container">
+            <h3>Post From</h3>
+            <form id="form-create">
+                <input type="text" id="title" placeholder="Title">
+                <textarea name="content" id="content" placeholder="Enter the content of your post">
+
+                </textarea>
+                <button type="submit">Crear post</button>
+            </form>
+        </aside>
+        <section class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-content">
+                    <tr>
+                        <td>Aplicar</td>
+                        <td>No todos entienden el poder de la diciplina</td>
+                        <td>
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnEditar">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aplicar</td>
+                        <td>No todos entienden el poder de la diciplina</td>
+                        <td>
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnEditar">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aplicar</td>
+                        <td>No todos entienden el poder de la diciplina</td>
+                        <td>
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnEditar">Editar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./Javascript/index.js"></script>
+</body>
+</html>
