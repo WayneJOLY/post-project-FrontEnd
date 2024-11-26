@@ -11,16 +11,22 @@
         <button class="btnAdd">Agregar</button>
     </section>
     <main class="main-content">
-        <aside class="form-container" id="form-container">
-            <h3>Post From</h3>
-            <form id="form-create">
-                <input type="text" id="title" placeholder="Title">
-                <textarea name="content" id="content" placeholder="Enter the content of your post">
-
-                </textarea>
-                <button type="submit">Crear post</button>
+        <aside class="form-container">
+            <h2>Add a new post</h2>
+            <form class="form">
+              <div class="form-group">
+                <label for="text">Title</label>
+                <input type="text" id="title" name="title" required="">
+        
+              <div class="form-group">
+                <label for="content">content</label>
+                <textarea name="content" id="content" rows="10" cols="50" required="">          </textarea>
+              </div>
+              <button class="form-submit-btn" type="submit">Add</button>
             </form>
-        </aside>
+    </aside>
+                
+        
         <section class="table-container">
             <table class="table">
                 <thead>
@@ -31,6 +37,22 @@
                     </tr>
                 </thead>
                 <tbody id="table-content">
+                    <tr>
+                        <td>Aplicar</td>
+                        <td>No todos entienden el poder de la diciplina</td>
+                        <td>
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnEditar">Editar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aplicar</td>
+                        <td>No todos entienden el poder de la diciplina</td>
+                        <td>
+                            <button class="btnEliminar">Eliminar</button>
+                            <button class="btnEditar">Editar</button>
+                        </td>
+                    </tr>
                     <tr>
                         <td>Aplicar</td>
                         <td>No todos entienden el poder de la diciplina</td>

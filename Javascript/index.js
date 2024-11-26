@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
     //Obtener el objeecto que se servirá para mostrar 
-    const tabla=document.getElementById("table-container")
+    const tabla=document.querySelector(".table-container")
     const crearPost=document.querySelector(".form-container")
     const btnAgregar=document.querySelector(".btnAdd")
 
@@ -36,6 +36,19 @@ document.addEventListener("DOMContentLoaded",()=>{
         
     })
 
+    crearPost.addEventListener("submit",()=>{
+        const newpost={
+            title:crearPost.title,
+            content:crearPost.content
+        }
+
+        try{
+            axios.post(`http://localhost:8080/api/v1/posts`,newpost)
+        }catch{
+            console.log(error)
+        }
+    })  
+        
     const deletePost= async(id)=>{
         try{
             await axios.delete(`http://localhost:8080/api/v1/posts/${id}`)
@@ -46,6 +59,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     btnAgregar.addEventListener("click",()=>{
         crearPost.classList.toggle("form-container-active")
+        tabla.classList.toggle("opacar")
+    })
+
+    tabla.addEventListener("click",()=>{
+        crearPost.classList.remove("form-container-active")
+        tabla.classList.remove("opacar")
     })
 })
 
