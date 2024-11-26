@@ -108,6 +108,10 @@ form button{
 button:active {
             scale: 0.95;
 }
+
+.add-container{
+    padding: 32px 24px;
+}
 .form-container {
     position: absolute;
     width: 500px;
