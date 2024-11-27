@@ -9,11 +9,11 @@
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 
  
 :root{
-    --backround-color:#010101;
+    --backround-color:#01010163;
     --succes-color:#006b21;
     --danger-color:#b30021;
     --info:#6fcaea;
@@ -111,6 +111,7 @@ button:active {
 
 .add-container{
     padding: 32px 24px;
+    display: block;
 }
 .form-container {
     position: absolute;
@@ -131,7 +132,7 @@ button:active {
     display: none;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
   }
   
   .form-container-active{
@@ -266,22 +267,33 @@ tbody tr td img {
 }
 
 tbody tr.hide td,
-tbody tr.hide td p {
+tbody tr.hide p {
     padding: 0;
     font: 0 / 0 inherit;
     transition: .2s ease-in-out .5s;
 }
 
+tr td{
+    font-size: 14px;
+    font-weight: 300;
+}
 
-
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+}
 .btnEliminar{
     background-color: var(--danger-color);
+    gap: 20px;
 }
-.btnEditar{
+
+#btnEditar{
     background-color: var(--succes-color);
 }
+
 .btnAdd{
     background-color: var(--info);
+    display: inline-block;
 }
 
 button{
