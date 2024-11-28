@@ -13,7 +13,7 @@
 
  
 :root{
-    --backround-color:#01010163;
+    --backround-color:#050101d9;
     --succes-color:#006b21;
     --danger-color:#b30021;
     --info:#6fcaea;
@@ -132,7 +132,7 @@ button:active {
     display: none;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
   }
   
   .form-container-active{
