@@ -34,7 +34,10 @@ const fechDatos=(async()=>{
             btnModificar.innerText="Modificar"
             btnAgregar.classList.add("btnEditar")
             btnModificar.id="btnEditar"
-            btnModificar.addEventListener("click",()=>{console.log("dio click al btn modificar" )})
+            btnModificar.addEventListener("click",()=>
+            {
+                window.location.href=`./HTML/edit.html?id=${post.id}`
+            })
 
             actions.appendChild(btnEliminar)
             actions.appendChild(btnModificar)
@@ -65,6 +68,10 @@ crearPost.addEventListener("submit",(e)=>{
     }catch{
         console.log(error)
     }
+
+    document.querySelector("#title").value=""
+    document.querySelector("#content").value=""
+    fechDatos()
 })  
     
 const deletePost= async(id)=>{
