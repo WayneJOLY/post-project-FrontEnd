@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded",()=>{
    document.querySelector(".form-container").addEventListener("submit",()=>
     {
         const newpost={
-            title:document.querySelector("#new-title").value,
-            content:document.querySelector("#new-content").value
+            title:document.querySelector("#new-title").value.trim(),
+            content:document.querySelector("#new-content").value.trim()
         }
 
         try{
-            axios.post(`http://localhost:8080/api/v1/posts/${id}`,newpost)
-
-            window.location.href="../index.html"
+            axios.put(`http://localhost:8080/api/v1/posts/${id}`,newpost)
+            window.location.href="./../index.html"
+            window.location.replace("./index.html")
         }catch{
             console.log(error)
         }
